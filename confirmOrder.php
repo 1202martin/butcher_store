@@ -1,5 +1,8 @@
 <?php
-    session_start();
+    if (! isset($_SESSION))
+    {
+        session_start();
+    }
     require "header.php";	//save current shopping cart into order table
     $connect = mysqli_connect('localhost', 'root', '', 'butcherStore'); // connection
 	$query = "SELECT orderId FROM ORDERS ORDER BY orderId DESC LIMIT 1";

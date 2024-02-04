@@ -1,5 +1,8 @@
 <?php
-    session_start();
+    if (!isset($_SESSION))
+        {
+            session_start();
+        }
     require "header.php";
     if (isset($_POST['goHomeBtn'])){
         unset($_SESSION['shopping_cart']);
