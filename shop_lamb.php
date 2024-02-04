@@ -131,7 +131,7 @@
 					else{
 						$gradeF = '';
 					}
-				$connect = mysqli_connect('localhost', 'root', '', 'butcherStore'); // connection
+				$connect = mysqli_connect('localhost', 'root', 'geommojam*12', 'butcherStore'); // connection
 				$query = 'SELECT * FROM PRODUCTS,TYPE,ORIGIN WHERE PRODUCTS.productId = TYPE.productId AND type="lamb" AND PRODUCTS.country=ORIGIN.country'.$countryF.$gradeF;
 				$result = mysqli_query($connect, $query);                       // execute the query
 				if ($result):
