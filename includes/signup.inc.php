@@ -107,3 +107,4 @@ else {
     header("Location: ../signup.php?signup=success");
     exit();
 }
+?>
