@@ -7,6 +7,7 @@ $dBName = "butcherStore";
 
 if (mysqli_connect_errno()){
     echo "Failed to Connect to MySQL: ", mysqli_connect_error();
+    $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
     if(!$conn) {
         // if connection not created
         // kill the connection
