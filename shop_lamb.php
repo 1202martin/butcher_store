@@ -1,6 +1,6 @@
 <?php
     require "header.php";
-    
+    //Contains string literal value of db acess; needs update
     // CHECK IF Add to Cart button has been submitted
     if(filter_input(INPUT_POST, 'add_to_cart')){
         if(isset($_SESSION['shopping_cart'])){
@@ -131,7 +131,7 @@
 					else{
 						$gradeF = '';
 					}
-				$connect = mysqli_connect('localhost', 'root', 'geommojam*12', 'butcherStore'); // connection
+				$connect = mysqli_connect('localhost', 'remote_admin', 'gwanggaeto*12', 'butcherStore'); // connection
 				$query = 'SELECT * FROM PRODUCTS,TYPE,ORIGIN WHERE PRODUCTS.productId = TYPE.productId AND type="lamb" AND PRODUCTS.country=ORIGIN.country'.$countryF.$gradeF;
 				$result = mysqli_query($connect, $query);                       // execute the query
 				if ($result):

@@ -4,7 +4,7 @@
         session_start();
     }
     require "header.php";	//save current shopping cart into order table
-    $connect = mysqli_connect('localhost', 'root', 'geommojam*12', 'butcherStore'); // connection
+    $connect = mysqli_connect('localhost', 'remote_admin', 'gwanggaeto*12', 'butcherStore'); // connection
 	$query = "SELECT orderId FROM ORDERS ORDER BY orderId DESC LIMIT 1";
 	$result = mysqli_query($connect,$query);
 	$oId = mysqli_fetch_assoc($result);
@@ -37,7 +37,7 @@
         $reviewProductId = $_POST['reviewProductId'];
         $reviewUserId = $_SESSION['userId'];
 
-        $connect = mysqli_connect('localhost', 'root', 'geommojam*12', 'butcherStore'); // connection
+        $connect = mysqli_connect('localhost', 'remote_admin', 'gwanggaeto*12', 'butcherStore'); // connection
         $query = "INSERT INTO REVIEWS_FOR (userId, productId, content, rating) VALUES ('$reviewUserId','$reviewProductId','$reviewContent','$reviewRating')";
         
         $connect->query($query);   

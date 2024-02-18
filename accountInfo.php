@@ -1,9 +1,10 @@
 <?php
+    //Contains string literal value of db acess; needs update
     session_start();
     require "header.php";
     
     
-    $connect = mysqli_connect('localhost', 'root', 'geommojam*12', 'butcherStore'); // connection
+    $connect = mysqli_connect('localhost', 'remote_admin', 'gwanggaeto*12', 'butcherStore'); // connection
     $validUserId = $_SESSION['userId'];
     $query = "SELECT * FROM USERS WHERE userId = $validUserId";
     

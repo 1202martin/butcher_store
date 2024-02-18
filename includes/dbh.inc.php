@@ -1,8 +1,8 @@
 <?php
-    
+    //Contains string literal value of db acess; needs update
 $servername = "localhost";
-$dBUsername = 'root';
-$dBPassword = 'geommojam*12';
+$dBUsername = 'remote_admin';
+$dBPassword = 'gwanggaeto*12';
 $dBName = "butcherStore";
 
 

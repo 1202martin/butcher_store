@@ -1,4 +1,5 @@
 <?php
+	//Contains string literal value of db acess; needs update
 	if (! isset($_SESSION))
     {
         session_start();
@@ -19,7 +20,7 @@
             </div>
         </section>
 		<?php
-			$connect = mysqli_connect('localhost', 'root', 'geommojam*12', 'butcherStore');
+			$connect = mysqli_connect('localhost', 'remote_admin', 'gwanggaeto*12', 'butcherStore');
 			$validUserId = $_SESSION['userId'];
 			$query = "SELECT * FROM ORDERS, SHIPMENT,PRODUCTS WHERE ORDERS.userId=$validUserId AND ORDERS.orderId=SHIPMENT.orderId AND ORDERS.productId=PRODUCTS.productId";
 			$result = mysqli_query($connect,$query);

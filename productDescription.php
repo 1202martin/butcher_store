@@ -1,4 +1,5 @@
 <?php
+    //Contains string literal value of db acess; needs update
     if (! isset($_SESSION))
     {
         session_start();
@@ -11,7 +12,7 @@
         endif;
     endif;
             
-    $connect = mysqli_connect('localhost', 'root', 'geommojam*12', 'butcherStore'); // connection
+    $connect = mysqli_connect('localhost', 'remote_admin', 'gwanggaeto*12', 'butcherStore'); // connection
     $query = "SELECT * FROM PRODUCTS,ORIGIN,REVIEWS_FOR WHERE PRODUCTS.productId = '$currentProductId' AND PRODUCTS.country = ORIGIN.country";
     
     if (mysqli_query($connect, $query)):
@@ -85,7 +86,7 @@
                 mysqli_free_result($result); 
                 mysqli_close();
 
-            $connect = mysqli_connect('localhost', 'root', 'geommojam*12', 'butcherStore');
+            $connect = mysqli_connect('localhost', 'remote_admin', 'gwanggaeto*12', 'butcherStore');
             $query = "SELECT * FROM REVIEWS_FOR WHERE REVIEWS_FOR.productId = '$currentProductId'";
             if (mysqli_query($connect, $query)):
                 $result = mysqli_query($connect, $query);
