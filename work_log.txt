@@ -22,3 +22,9 @@
     Fixed the apache2 not loading the php website properly problem; it was an issue with apache2 not having loaded the appropriate modules.
     Referenced a post on medium about installing && running apache at the following link.
     https://medium.com/@bahadirmezgil/how-to-install-php-and-apache-on-linux-ubuntu-linux-mint-ea73a1c1c426
+
+2024-02-18
+    Apparently the MySQL issue persisted since February 4th. Guess I just wasn't well aware. Apparently the mysqli not loading due to 
+    not being able to load symbol mysqlnd_global_stats was an issue with apache2 configuration file- I had to enable "extension=mysqlnd"
+    BEFORE the "extension=mysqli" configuration.
+    
